@@ -27,7 +27,7 @@ then
         robot \
         --outputDir $ROBOT_REPORTS_FINAL_DIR \
         ${ROBOT_OPTIONS} \
-        $ROBOT_TESTS_DIR
+        $ROBOT_TEST_SCRIPT
 else
     xvfb-run \
         --server-args="-screen 0 ${SCREEN_WIDTH}x${SCREEN_HEIGHT}x${SCREEN_COLOUR_DEPTH} -ac" \
@@ -37,7 +37,7 @@ else
         ${PABOT_OPTIONS} \
         --outputDir $ROBOT_REPORTS_FINAL_DIR \
         ${ROBOT_OPTIONS} \
-        $ROBOT_TESTS_DIR
+        $ROBOT_TEST_SCRIPT
 fi
 
 ROBOT_EXIT_CODE=$?
